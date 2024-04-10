@@ -1,0 +1,22 @@
+% \usepackage{fancyhdr}
+% \usepackage{lastpage}
+
+\pagestyle{fancy}
+
+\fancyhead{}
+\fancyfoot{}
+
+\renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{firstpage}{%
+    \fancyhead[L]{%
+        \underline{\hspace{4cm}} \\
+        Contractor Name
+    }
+    \fancyhead[R]{%
+        \underline{\hspace{4cm}} \\
+        Date
+    }
+
+    \fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+}
