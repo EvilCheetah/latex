@@ -1,0 +1,28 @@
+% \usepackage{fontenc}
+
+\title{}
+\author{Eugene Moshchyn}
+\date{\today}
+
+
+\makeatletter
+
+    \renewcommand{\maketitle}{%
+        \noindent%
+        \begin{center}
+            {
+                \LARGE%
+                \bfseries%
+                \scshape%
+                \textbf{\@author}%
+            } \\
+            \vspace{0.25em}
+            {
+                \Large%
+                \scshape%
+                Software Engineer
+            }
+        \end{center}
+    }
+
+\makeatother
