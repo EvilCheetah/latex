@@ -1,7 +1,16 @@
-\documentclass[11pt]{article}
+\documentclass[16pt]{article}
 
 % Importing
 \usepackage{import}
+
+% Footnote configuration
+\usepackage[hang]{footmisc}
+
+% Custom Title Formatting
+\usepackage{titlesec}
+
+% Hyperlinks
+\usepackage{hyperref}
 
 % Page Configuration
 \usepackage{geometry}
@@ -14,14 +23,20 @@
 % Flexible Underline for Input Fields
 \usepackage{xhfill}
 
+% Font Encoding
 \usepackage[T1]{fontenc}
+
+% Additional Text
+\usepackage{soulutf8}
 
 % Set Configuration
 \import{config/}{geometry.tex}
-\import{config/}{header-footer.tex}
 \import{config/}{input.tex}
 \import{config/}{title.tex}
+\import{config/}{footmisc.tex}
+\import{config/}{titlesec.tex}
 
+\import{content/}{header-footer.tex}
 
 
 \begin{document}
