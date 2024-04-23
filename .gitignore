@@ -1,4 +1,11 @@
+# LaTeX Generated Files
 *.aux
+*.fdb_latexmk
+*.fls
 *.log
-*.pdf
 *.out
+*.pdf
+*.synctex.gz
+
+# Input Files
+*.example
