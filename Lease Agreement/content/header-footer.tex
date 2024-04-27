@@ -1,13 +1,14 @@
 % \usepackage{fancyhdr}
 % \usepackage{lastpage}
 
-
-\newcommand{\signaturefield}[1]{%
-    \parbox{0.33\linewidth}{%
-        \rule{.33\textwidth}{0.5pt}\\
-        #1
+\newcommand
+    {\InkFillableField}[1]
+    {%
+        \parbox{0.33\linewidth}{%
+            \rule{.33\textwidth}{0.5pt}\\
+            #1
+        }
     }
-}
 
 
 \pagestyle{fancy}
@@ -19,10 +20,10 @@
 
 \fancypagestyle{firstpage}{%
     \fancyhead[L]{%
-        \signaturefield{Contractor Name}
+        \InkFillableField{Contractor Name}
     }
     \fancyhead[R]{%
-        \signaturefield{Date}
+        \InkFillableField{Date}
     }
 }
 
