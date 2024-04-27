@@ -1,8 +1,14 @@
-
 {
+    \newcommand{\RowSpacing}{1.5}
+    \newcommand{\InkFieldThinkness}{0.5pt}
+
     \noindent%
     \begin{minipage}{0.495\linewidth}
         \subsubsection{Carrier}
+
+        \begingroup
+        \renewcommand{\arraystretch}{\RowSpacing}
+
         \begin{center}
             \begin{tabularx}{\textwidth}{l L}
                 \multicolumn{2}{l}{\CarrierName}         \\
@@ -12,21 +18,29 @@
                 Email:         & \CarrierPhoneNumber
             \end{tabularx}
         \end{center}
+
+        \endgroup
     \end{minipage}%
     %
     \hfill%
     %
     \begin{minipage}{0.495\linewidth}
         \subsubsection{Contractor}
+
+        \begingroup
+        \renewcommand{\arraystretch}{\RowSpacing}
+
         \begin{center}
             \begin{tabularx}{\textwidth}{l X}
-                Name:        & \rule{\linewidth}{0.5pt} \\
-                Address:     & \rule{\linewidth}{0.5pt} \\
-                City, State: & \rule{\linewidth}{0.5pt} \\
-                Phone:       & \rule{\linewidth}{0.5pt} \\
-                Email:       & \rule{\linewidth}{0.5pt}
+                Name:        & \rule{\linewidth}{\InkFieldThinkness} \\
+                Address:     & \rule{\linewidth}{\InkFieldThinkness} \\
+                City, State: & \rule{\linewidth}{\InkFieldThinkness} \\
+                Phone:       & \rule{\linewidth}{\InkFieldThinkness} \\
+                Email:       & \rule{\linewidth}{\InkFieldThinkness}
             \end{tabularx}
         \end{center}
+
+        \endgroup
     \end{minipage}
 }
 \vspace{1em}
