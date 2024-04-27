@@ -1,6 +1,15 @@
 % \usepackage{fancyhdr}
 % \usepackage{lastpage}
 
+
+\newcommand{\signaturefield}[1]{%
+    \parbox{0.33\linewidth}{%
+        \rule{.33\textwidth}{0.5pt}\\
+        #1
+    }
+}
+
+
 \pagestyle{fancy}
 
 \fancyhead{}
@@ -10,17 +19,11 @@
 
 \fancypagestyle{firstpage}{%
     \fancyhead[L]{%
-        \parbox{0.33\linewidth}{%
-            \rule{.33\textwidth}{0.5pt}\\
-            Contractor Name
-        }
+        \signaturefield{Contractor Name}
     }
     \fancyhead[R]{%
-        \parbox{0.33\linewidth}{%
-            \rule{.33\textwidth}{0.5pt}\\
-            Date
-        }
+        \signaturefield{Date}
     }
 }
 
-\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[C]{Page {\thepage} of {\ztotpages}}
