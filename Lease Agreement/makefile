@@ -6,8 +6,9 @@ TARGET = Lease-Agreement
 SOURCE = main
 
 $(TARGET):
-	@$(COMPILER) $(FLAGS) \
-	$(SOURCE).tex
+	@$(COMPILER) $(FLAGS)  \
+		-jobname=$(TARGET) \
+		$(SOURCE).tex
 
 # Clean up generated files
 clean:
