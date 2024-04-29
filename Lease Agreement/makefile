@@ -12,10 +12,13 @@ $(TARGET):
 
 # Clean up generated files
 clean:
-	@rm -f *.aux		 \
-		   *.fdb_latexmk \
-		   *.fls		 \
-		   *.log		 \
-		   *.out		 \
-		   *.pdf		 \
-		   *.synctex.gz
+	@rm -f *.aux	  \
+		*.aux		  \
+		*.dvi		  \
+		*.fdb_latexmk \
+		*.fls		  \
+		*.log		  \
+		*.out		  \
+		*.out.ps	  \
+		*.pdf		  \
+		*.synctex.gz  \
