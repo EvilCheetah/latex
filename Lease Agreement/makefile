@@ -1,11 +1,13 @@
+COMPILER = latexmk
+FLAGS    = -pdf
+
 # Target executable name
 TARGET = Lease-Agreement
 SOURCE = main
 
 $(TARGET):
-	@pdflatex -output-directory=. \
-			 -jobname=$(TARGET)   \
-			 $(SOURCE)
+	@$(COMPILER) $(FLAGS) \
+	$(SOURCE).tex
 
 # Clean up generated files
 clean:
