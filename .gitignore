@@ -7,10 +7,12 @@
 ### LaTeX Files
 # Generated
 *.aux
+*.dvi
 *.fdb_latexmk
 *.fls
 *.log
 *.out
+*.out.ps
 *.pdf
 *.synctex.gz
 
