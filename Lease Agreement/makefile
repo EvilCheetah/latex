@@ -1,5 +1,5 @@
 COMPILER = latexmk
-FLAGS    = -pdf -c
+FLAGS    = -pdf
 
 # Target executable name
 TARGET = Lease-Agreement
