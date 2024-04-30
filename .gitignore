@@ -6,6 +6,7 @@
 
 ### LaTeX Files
 # Generated
+*.*(busy)
 *.aux
 *.dvi
 *.fdb_latexmk
