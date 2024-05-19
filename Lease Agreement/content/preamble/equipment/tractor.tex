@@ -1,9 +1,21 @@
 % \usepackage{etoolbox}
 
-\begin{tabularx}{\linewidth}{l L}
-    Year:       & \textbf{\VehicleYear}         \\
-    Make:       & \textbf{\VehicleMake}         \\
-    Model:      & \textbf{\VehicleModel}        \\
-    Lic. Plate: & \textbf{\VehicleLicensePlate} \\
-    VIN:        & \textbf{\VehicleVIN}
-\end{tabularx}
+\ifboolexpr{
+    test {\ifdef{\VehicleYear}}         and
+    test {\ifdef{\VehicleMake}}         and
+    test {\ifdef{\VehicleModel}}        and
+    test {\ifdef{\VehicleLicensePlate}} and
+    test {\ifdef{\VehicleVIN}}
+}
+{
+    \begin{tabularx}{\linewidth}{l L}
+        Year:       & \textbf{\VehicleYear}         \\
+        Make:       & \textbf{\VehicleMake}         \\
+        Model:      & \textbf{\VehicleModel}        \\
+        Lic. Plate: & \textbf{\VehicleLicensePlate} \\
+        VIN:        & \textbf{\VehicleVIN}
+    \end{tabularx}
+}
+{
+    \textsc{No Tractor Leased}
+}

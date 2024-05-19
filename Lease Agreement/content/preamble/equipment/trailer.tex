@@ -1,9 +1,21 @@
 % \usepackage{etoolbox}
 
-\begin{tabularx}{\linewidth}{l L}
-    Year:        & \textbf{\TrailerYear}         \\
-    Make:        & \textbf{\TrailerMake}         \\
-    Trailer No.: & \textbf{\TrailerNumber}       \\
-    Lic. Plate:  & \textbf{\TrailerLicensePlate} \\
-    VIN:         & \textbf{\TrailerVIN}
-\end{tabularx}
+\ifboolexpr{
+    test {\ifdef{\TrailerYear}}         and
+    test {\ifdef{\TrailerMake}}         and
+    test {\ifdef{\TrailerNumber}}       and
+    test {\ifdef{\TrailerLicensePlate}} and
+    test {\ifdef{\TrailerVIN}}
+}
+{
+    \begin{tabularx}{\linewidth}{l L}
+        Year:        & \textbf{\TrailerYear}         \\
+        Make:        & \textbf{\TrailerMake}         \\
+        Trailer No.: & \textbf{\TrailerNumber}       \\
+        Lic. Plate:  & \textbf{\TrailerLicensePlate} \\
+        VIN:         & \textbf{\TrailerVIN}
+    \end{tabularx}
+}
+{
+    \textsc{No Trailer Leased}
+}
