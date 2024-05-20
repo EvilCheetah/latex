@@ -1,0 +1,61 @@
+\documentclass{exam}
+
+\usepackage{import}
+
+\import{../common/config}{usepackage.tex}
+
+
+\begin{document}
+    \noindent
+    \question{Question 1:} For each pair of functions below, first
+    determine which function grows asymptotically faster, and then express
+    the relation between the two functions using all the asymptotic
+    notations (%
+        $\boldsymbol{\theta}$,
+        $\boldsymbol{   O  }$,
+        $\boldsymbol{\Omega}$,
+        $\boldsymbol{   o  }$,
+        and
+        $\boldsymbol{\omega}$%
+    )
+    that apply. Only give the relations in which $\boldsymbol{f(n)}$
+    appears on the left-hand size. \textbf{Justify your answer}, and
+    use the limit definition if necessary.\\
+    {
+        \indent (1)
+        \indent $f(n) = n^2 + (log(n))^3$
+        \indent $g(n) = n^2 log(n)$
+        \indent No justification is required
+    }
+    \vspace{1in} \\
+    {
+        \indent (2)
+        \indent $f(n) = 4^n$
+        \indent $g(n) = 3^n + n$
+        \indent Justify your answer using the limit definition.
+        Show your work.
+    }
+    \\
+    \\
+    \noindent
+    \question{Question 2:} If we know that the running time $T(n)$ of
+    some algorithm satisfies the relations:
+    $\boldsymbol{T(n) = o(n^{2.5} \cdot log(n))}$
+    and
+    $\boldsymbol{T(n) = \Omega( n \cdot (log(n))^3 )}$
+    Which of the following functions can $\boldsymbol{T(n)}$ possibly
+    be? Circle \textbu{all} that apply.\\
+    {
+        \indent
+        $n^{2.5} \cdot log(n)$
+        \hfill
+        $n \cdot (log(n))^3$
+        \hfill
+        $n \cdot (log(n))^5$
+        \hfill
+        $n^{1.01}$
+        \hfill
+        $n^{2.6}$
+        \indent
+    }
+\end{document}
