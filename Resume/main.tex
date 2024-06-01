@@ -1,18 +1,11 @@
-\documentclass[11pt]{article}
+\documentclass{moderncv}
 
+\usepackage{import}
 
-% Page Configuration
-\usepackage{geometry}
-
-% Font Features
-\usepackage[T1]{fontenc}
-
-% Set Configuration
-\input{config/geometry.tex}
-\input{config/title.tex}
-
+\import{config}{index.tex}
+\import{data}{index.tex}
 
 
 \begin{document}
-    \maketitle
+    \import{content}{index.tex}
 \end{document}
