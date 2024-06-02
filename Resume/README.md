@@ -38,5 +38,11 @@ For installing the packages, please refer to the following article:
   `latexmk -pdf -jobname=Resume main.tex`
 
 # Example
-You can view a compiled [Lease Agreement](./Lease-Agreement.pdf) filled
+You can view a compiled [Resume](./Resume.pdf) filled
 with placeholders to take a look at the potential result.
+
+To see the original document that the resume was created from, you can
+check
+[Microsoft Word: Reference - Resume.docx](./Reference%20-%20Resume.docx)
+and
+[PDF: Reference - Resume.pdf](./Reference%20-%20Resume.pdf)
