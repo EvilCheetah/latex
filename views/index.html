@@ -15,7 +15,7 @@
 
 
 {{ block "lease-agreement-form" . }}
-<form>
+<form id="lease-agreement-form">
     {{ template "progress-bar" . }}
 
     {{ template "carrier-information" . }}
@@ -26,10 +26,10 @@
 
 
 {{ block "progress-bar" . }}
-<ul>
-    <li>Carrier Information</li>
-    <li>Equipment</li>
-    <li>Commission Fees</li>
+<ul id="progress-bar">
+    <li class="active step">Carrier Information</li>
+    <li class="step">Equipment</li>
+    <li class="step">Commission Fees</li>
 </ul>
 {{ end }}
 
@@ -88,7 +88,7 @@
     />
 
     <input
-        type="text"
+        type="email"
         name="email"
         id="email"
         placeholder="Email"
@@ -100,6 +100,14 @@
         id="phone-number"
         placeholder="Phone Number"
     />
+
+    <input
+        type="button"
+        name="next"
+        class="next action-button"
+        value="Next"
+    />
+
 </fieldset>
 {{ end }}
 

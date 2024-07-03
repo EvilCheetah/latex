@@ -1,3 +1,10 @@
+:root {
+    --number-of-form-steps: 3;
+    --accent-color: #679b9b;
+    --active-color: #ff9a76;
+}
+
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -6,9 +13,18 @@
     margin: 0;
 }
 
+html {
+    background-color: #ffeadb;
+}
+
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
 }
 
 img, picture, video, canvas, svg {
@@ -22,4 +38,115 @@ input, button, textarea, select {
 
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+}
+
+
+#lease-agreement-form {
+    min-width: 400px;
+}
+
+#progress-bar {
+    --accent-color: #679b9b;
+    --active-color: #ff9a76;
+
+    padding: 0;
+    overflow: hidden;
+    counter-reset: step;
+    text-align: center;
+}
+
+#progress-bar > .step {
+    --width: 2em;
+    --line-height: 2px;
+
+    list-style: none;
+    color: var(--accent-color);
+    text-transform: uppercase;
+
+    width: calc(100% / var(--number-of-form-steps));
+    float: left;
+
+    position: relative;
+}
+
+#progress-bar > .step:before {
+    display: grid;
+    place-content: center;
+
+    content: counter(step);
+    counter-increment: step;
+
+    line-height: var(--width);
+    width: var(--width);
+
+    background-color: var(--accent-color);
+    color: #fff;
+
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+#progress-bar > .step:after {
+    background-color: var(--accent-color);
+    
+    content: "";
+
+    width: 100%;
+    height: var(--line-height);
+
+    position: absolute;
+    left: -50%;
+
+    top: calc( (var(--width) - var(--line-height)) / 2 );
+    z-index: -1;
+}
+
+
+#progress-bar > .step.active {
+    color: var(--active-color);
+}
+
+#progress-bar > .step.active::after,
+#progress-bar > .step.active::before {
+    background-color: var(--active-color);
+} 
+
+#progress-bar > .step:first-child:after {
+    content: none;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    flex-shrink: 0;
+}
+
+fieldset:not(:first-of-type) {
+    display: none;
+}
+
+input {
+    padding: 0.5em 1em;
+    border: 1px solid #ccc;
+}
+
+input:focus {
+    border-color: #679b9b;
+    outline: none;
+    color: #637373;
+}
+
+.action-button {
+    font-weight: bold;
+
+    color: #fff;
+    background-color: var(--active-color);
+    border: none;
+
+    border-radius: 3px;
+    cursor: pointer;
+
+    width: 100px;
 }
