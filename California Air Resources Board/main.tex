@@ -1,17 +1,16 @@
 \documentclass{article}
 
-\usepackage{graphicx}
-\usepackage[notransparent]{svg}
 
-\graphicspath{ {./reference} }
+\usepackage{import}
+\import{config}{index.tex}
 
 
 \begin{document}
     % Header Logo
     \noindent
     \begin{minipage}[t]{1.0\textwidth}
-        \includesvg[height = 0.25in]{carb-logo.svg}
+        % \includesvg[height = 0.25in]{carb-logo.svg}
         \hfill
-        \includegraphics[height = 0.25in]{CARB CTC Logo.png}
+        \includegraphics[height = 0.25in]{carb-ctc-logo.png}
     \end{minipage}
 \end{document}
