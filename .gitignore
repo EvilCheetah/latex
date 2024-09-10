@@ -1,0 +1,21 @@
+### macOS Template
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### LaTeX Files
+# Generated
+*.*(busy)
+*.aux
+*.dvi
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.out.ps
+*.pdf
+*.synctex.gz
+
+# Input
+*.example
