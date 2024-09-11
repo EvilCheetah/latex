@@ -1,2 +1,29 @@
-\subimport{.}{formatting.tex}
-\subimport{.}{boxed-information.tex}
+\begin{samepage}
+    \thispagestyle{firstpage}
+
+    \newcommand{\LargeFont}{\Large}
+
+    \subimport{.}{formatting.tex}
+    \subimport{.}{boxed-information.tex}
+    %
+    % Dynamic vSpace
+    \vspace{\stretch{1}}
+
+    \begin{center}
+        \setlength{\parskip}{1.0\baselineskip}
+        \setlength{\parindent}{0pt}
+
+        \subimport{.}{client-information.tex}
+
+        \subimport{.}{document-title.tex}
+
+        \subimport{.}{prepared-by.tex}
+
+        \subimport{.}{department.tex}
+
+        \subimport{.}{timestamp.tex}
+    \end{center}
+    %
+    % Dynamic vSpace
+    \vspace{\stretch{1}}
+\end{samepage}
