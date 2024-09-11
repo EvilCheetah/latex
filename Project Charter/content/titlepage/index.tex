@@ -1,29 +1,46 @@
+% Title Fields
+\title{Project Charter Document}
+\author{\TeamName}
+\date{\DocumentDate}
 
-\begin{samepage}
-    \thispagestyle{firstpage}
 
-    \newcommand{\LargeFont}{\Large}
+% Title Format Configuration
+\makeatletter
+    \renewcommand{\maketitle}
+    {%
+        \noindent%
+        \begin{center}
+            % TODO: Remove Disclaimer Before Submition
+            \subimport{disclaimer/}{index.tex}%
+            %
+            %
+            \begin{center}
+                \setlength{\parskip}{2.0\baselineskip}
+                \setlength{\parindent}{0pt}
+                % Dynamic vSpace
+                \vspace{\stretch{1}}
+                %
+                \Large%
+                \ClientName
 
-    \subimport{disclaimer/}{index.tex}
-    %
-    % Dynamic vSpace
-    \vspace{\stretch{1}}
+                {\bfseries \MakeUppercase{\@title}}
 
-    \begin{center}
-        \setlength{\parskip}{1.0\baselineskip}
-        \setlength{\parindent}{0pt}
+                \textbf{Prepared by Senior Project Team} \\
+                \@author
 
-        \subimport{.}{client-information.tex}
+                \subimport{.}{department-info.tex}
 
-        \subimport{.}{document-title.tex}
+                \textbf{Date}: \@date
+                %
+                % Dynamic vSpace
+                \vspace{\stretch{1}}
+            \end{center}
+        \end{center}
+    }
 
-        \subimport{.}{prepared-by.tex}
+\makeatother
 
-        \subimport{.}{department.tex}
 
-        \subimport{.}{timestamp.tex}
-    \end{center}
-    %
-    % Dynamic vSpace
-    \vspace{\stretch{1}}
-\end{samepage}
+% Create Title
+\maketitle
+\thispagestyle{empty}
