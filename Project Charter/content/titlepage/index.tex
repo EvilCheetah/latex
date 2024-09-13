@@ -8,9 +8,11 @@
 \makeatletter
     \renewcommand{\maketitle}
     {%
-        \noindent%
+        %
+        % Dynamic vSpace
+        \vspace{\stretch{1}}
         \begin{center}
-            % TODO: Remove Disclaimer Before Submition
+            % TODO(eugene): Remove Disclaimer Before Submition
             \subimport{disclaimer/}{index.tex}%
             %
             %
@@ -36,11 +38,15 @@
                 \vspace{\stretch{1}}
             \end{center}
         \end{center}
+        %
+        % Dynamic vSpace
+        \vspace{\stretch{1}}
     }
 
 \makeatother
-
-
+%
+%
 % Create Title
 \maketitle
+
 \thispagestyle{empty}
