@@ -12,7 +12,7 @@ $(TARGET):
 
 # Clean up generated files
 clean:
-	@rm -f *.aux	  \
+	@rm -f 			  \
 		*.aux		  \
 		*.dvi		  \
 		*.fdb_latexmk \
@@ -22,3 +22,4 @@ clean:
 		*.out.ps	  \
 		*.pdf		  \
 		*.synctex.gz  \
+		*.toc
