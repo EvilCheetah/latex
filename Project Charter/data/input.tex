@@ -1,29 +1,52 @@
 % \usepackage{fontenc}
 % \usepackage[dvipsnames]{xcolor}
 
-\newcommand{\EmphColor}{\color{WildStrawberry}}
+\newcommand{\Emphasize}[1]
+    {%
+        {\leavevmode\color{WildStrawberry} #1}%
+    }
 
 
-\newcommand{\PreparerName}{%
-    {\EmphColor PREPARER\_NAME}%
+\newcommand{\DocumentDate}{%
+    \Emphasize{DOCUMENT\_DATE}%
 }
 
 
-\newcommand{\ClientName}{%
-    {\EmphColor CLIENT\_NAME}%
+% ----- Project Related Information ---- %
+\newcommand{\PreparerName}{%
+    \Emphasize{PREPARER\_NAME}%
 }
 
 
 \newcommand{\TeamName}{%
-    {\EmphColor TEAM\_NAME}%
+    \Emphasize{TEAM\_NAME}%
 }
 
 
 \newcommand{\ProjectName}{%
-    {\EmphColor PROJECT\_NAME}%
+    \Emphasize{PROJECT\_NAME}%
 }
+% -------------------------------------- %
 
 
-\newcommand{\DocumentDate}{%
-    {\EmphColor DOCUMENT\_DATE}%
+% ----- Client Related Information ----- %
+\newcommand{\ClientName}{%
+    \Emphasize{CLIENT\_NAME}%
 }
+
+\newcommand{\ClientTitle}{%
+    \Emphasize{CLIENT\_TITLE}%
+}
+
+\newcommand{\ClientOrganization}{%
+    \Emphasize{CLIENT\_ORGANIZATION}%
+}
+
+\newcommand{\ClientPhoneNumber}{%
+    \Emphasize{CLIENT\_PHONE\_NUMBER}%
+}
+
+\newcommand{\ClientEmail}{%
+    \Emphasize{CLIENT\_EMAIL}%
+}
+% -------------------------------------- %
