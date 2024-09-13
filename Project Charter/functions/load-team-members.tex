@@ -1,0 +1,21 @@
+% \usepackage{datatool}
+
+\DTLloaddb{teamdata}{team.csv}
+
+
+\newcommand{\LoadTeamMembers}{%
+    \begin{tabularx}{\linewidth}{l l}
+        \DTLforeach
+            {teamdata}{
+                \Name=Name,
+                \Email=Email,
+                \PhoneNumber=PhoneNumber%
+            }
+            {%
+                Name:          & \Emphasize{\Name}        \\
+                Email Address: & \Emphasize{\Email}       \\
+                Phone Number:  & \Emphasize{\PhoneNumber} \\
+                               &                          \\
+            }
+    \end{tabularx}
+}
