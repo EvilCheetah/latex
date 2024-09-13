@@ -6,13 +6,15 @@
 % Configure Packages and Document
 \import{config}{index.tex}
 
-\import{data}{input.tex}
+% Load Custom Functions
+\import{functions}{index.tex}
 
+\import{data}{input.tex}
 
 \graphicspath{ {./static/} }
 
 
 \begin{document}
-    \noindent
-    \subimport{content}{index.tex}
+    \setlength{\parindent}{0pt}
+    \import{content}{index.tex}
 \end{document}
