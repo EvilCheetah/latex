@@ -10,3 +10,8 @@
   original document created in Microsoft Word. The revision addresses several
   issues from the previous version, including poor formatting, inconsistent text
   wrapping, and misaligned content.
+
+# Previews
+- Legal Documents:
+    * [Lease Agreement | PDF](./Legal%20Documents/Lease%20Agreement/Lease-Agreement.pdf)
+- [Resume | PDF](./Resume/Resume.pdf)
