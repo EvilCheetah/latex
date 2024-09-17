@@ -2,7 +2,7 @@ COMPILER = latexmk
 FLAGS    = -pdf
 
 # Target executable name
-TARGET = Document-Template
+TARGET = "Oklahoma Secretary of State - Agreement"
 SOURCE = main
 
 $(TARGET):
