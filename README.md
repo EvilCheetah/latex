@@ -1,11 +1,10 @@
 # Oklahoma Secretary of State - Agreement 
-This is a Preserved version that imitates the styling of an Original Agreement,
-which can be found at
-[OK SOS Agreement](https://www.sos.ok.gov/content/client/Agreement.pdf)
+This is a preserved version that replicates the style of the original agreement, which can be accessed at
+[OK SOS Agreement | PDF](https://www.sos.ok.gov/content/client/Agreement.pdf)
 
 # Previews
-A compiled preview of the document can be found in
-[Oklahoma Secretary of State - Agreement](./Oklahoma%20Secretary%20of%20State%20-%20Agreement.pdf)
+A compiled preview of the document is available at
+[Oklahoma Secretary of State - Agreement | PDF](./Oklahoma%20Secretary%20of%20State%20-%20Agreement.pdf)
 
 # Compilation
 ## Requirements
