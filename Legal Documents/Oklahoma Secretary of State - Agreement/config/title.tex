@@ -1,0 +1,21 @@
+% Title Format Configuration
+\makeatletter
+    \renewcommand{\maketitle}
+    {%
+        {%
+            \large
+            \bfseries
+            \begin{tcolorbox}[
+                colback = gray!30,
+                width   = \linewidth,
+                arc     = 0pt,
+                boxrule = 0pt,
+                boxsep  = 0.1em
+            ]
+                \centering
+                {\@title}
+            \end{tcolorbox}
+        }%
+    }
+
+\makeatother
