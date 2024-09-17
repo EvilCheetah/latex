@@ -1,17 +1,37 @@
-# Documents
-- [Legal Documents](./Legal%20Documents/)
-    * [California Air Resources Board](./Legal%20Documents/California%20Air%20Resources%20Board/) - an attempt to reproduce the same
-    formatting in [CARB](https://ww2.arb.ca.gov/) Certificate.
-    * [Lease Agreement](./Legal%20Documents/Lease%20Agreement/) - refined
-      version of the Lease Agreement originally created in Microsoft Word. This
-      rework addresses issues with poor formatting, inconsistent text wrapping,
-      and alignment, and introduces aesthetically pleasing ink-fillable fields.
-- [Resume](./Resume/) - updated version of my resume is a refined rework of the
-  original document created in Microsoft Word. The revision addresses several
-  issues from the previous version, including poor formatting, inconsistent text
-  wrapping, and misaligned content.
+# Oklahoma Secretary of State - Agreement 
+This is a Preserved version that imitates the styling of an Original Agreement,
+which can be found at
+[OK SOS Agreement](https://www.sos.ok.gov/content/client/Agreement.pdf)
 
 # Previews
-- Legal Documents:
-    * [Lease Agreement | PDF](./Legal%20Documents/Lease%20Agreement/Lease-Agreement.pdf)
-- [Resume | PDF](./Resume/Resume.pdf)
+A compiled preview of the document can be found in
+[Oklahoma Secretary of State - Agreement](./Oklahoma%20Secretary%20of%20State%20-%20Agreement.pdf)
+
+# Compilation
+## Requirements
+- [LaTeX](https://www.latex-project.org/) -
+    [latexmk](https://mg.readthedocs.io/latexmk.html)
+- Make (**optional**)
+    [[Windows](https://community.chocolatey.org/packages/make) |
+    [Unix](https://www.gnu.org/software/make/)]
+
+## Prerequisites
+Ensure your LaTeX distribution has the following packages installed, or
+install them manually:
+- [`geometry`](https://ctan.org/pkg/geometry) - used for document (page) layout configuration.
+- [`tcolorbox`](https://ctan.org/pkg/tcolorbox) - used for colored and framed
+  text boxes.
+- [`times`](https://ctan.org/pkg/times) - used for `Times New Roman` font family.
+- [`titlesec`](https://ctan.org/pkg/titlesec) - used for title and subtitle
+  custom formatting.
+
+For installing the packages, please refer to the following article:
+[Wikibooks - LaTeX/Installing Extra Packages](https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages)
+
+## Document Compilation
+- Using makefile, run the following command:  
+  `make`
+
+**`OR`**
+- Manually:  
+  `latexmk -pdf -jobname="Oklahoma Secretary of State - Agreement" main.tex`
