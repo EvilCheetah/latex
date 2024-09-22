@@ -1,0 +1,19 @@
+\makeatletter
+
+    \renewcommand
+        {\maketitle}
+        {%
+            {%
+                \LARGE%
+                \bfseries%
+                \scshape%
+                {\@title}
+            }
+
+            {
+                \Large%
+                \textbf{Created on \@date}
+            }
+        }
+
+\makeatother
