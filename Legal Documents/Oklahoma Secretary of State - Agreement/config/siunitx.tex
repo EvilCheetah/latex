@@ -1,6 +1,7 @@
 % Formats a Number as Currency in the following format:
-%   5000    -> $5,000.00
-%   5000.00 -> $5,000.00
+%   5000     -> $5,000.00
+%   5000.00  -> $5,000.00
+%   5,000.00 -> $5,000.00
 \newcommand
     {\USD}[1]
     {%
@@ -10,6 +11,7 @@
             round-mode           = places,
             group-separator      = {,},
             group-minimum-digits = 4,
+            input-ignore         = {,}
             round-integer-to-decimal
         ]
         {#1}%
