@@ -6,11 +6,22 @@
       version of the Lease Agreement originally created in Microsoft Word. This
       rework addresses issues with poor formatting, inconsistent text wrapping,
       and alignment, and introduces aesthetically pleasing ink-fillable fields.
-    * [Oklahoma Secretary of State - Agreement](./Legal%20Documents/Oklahoma%20Secretary%20of%20State%20-%20Agreement/) — an enhanced reproduction of the original document, maintaining the style of the original [Oklahoma Secretary of State Agreement](https://www.sos.ok.gov/content/client/Agreement.pdf). The preserved version, closely replicating the original document's style, is available in the [`ok-sos-agreement`](https://github.com/EvilCheetah/latex/tree/ok-sos-agreement) branch. A more refined and robust version can be found in the `master` branch.
+    * [Oklahoma Secretary of State - Agreement](./Legal%20Documents/Oklahoma%20Secretary%20of%20State%20-%20Agreement/) — an enhanced
+    reproduction of the original document, maintaining the style of the original
+    [Oklahoma Secretary of State Agreement](https://www.sos.ok.gov/content/client/Agreement.pdf). The preserved version, closely replicating the original document's style, is
+    available in the
+    [`ok-sos-agreement`](https://github.com/EvilCheetah/latex/tree/ok-sos-agreement)
+    branch. A more refined and robust version can be found in the `master`
+    branch.
 - [Resume](./Resume/) - updated version of my resume is a refined rework of the
   original document created in Microsoft Word. The revision addresses several
   issues from the previous version, including poor formatting, inconsistent text
   wrapping, and misaligned content.
+
+# Document Template
+The document template used in most documents can be found in the
+[`document-template`](https://github.com/EvilCheetah/latex/tree/document-template)
+branch.
 
 # Previews
 - Legal Documents:
