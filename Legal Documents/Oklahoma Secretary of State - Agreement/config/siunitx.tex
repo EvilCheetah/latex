@@ -1,10 +1,16 @@
+% Formats a Number as Currency in the following format:
+%   5000    -> $5,000.00
+%   5000.00 -> $5,000.00
 \newcommand
-    {USD}
+    {\USD}[1]
     {%
-        \SI[
-            round-precision = 2,
-            round-mode      = places,
+        \$%
+        \num[
+            round-precision      = 2,
+            round-mode           = places,
+            group-separator      = {,},
+            group-minimum-digits = 4,
             round-integer-to-decimal
         ]
-        {34324}[\$]{}   
+        {#1}%
     }
