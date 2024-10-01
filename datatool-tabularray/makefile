@@ -2,7 +2,7 @@ COMPILER = latexmk
 FLAGS    = -pdf
 
 # Target executable name
-TARGET = Document-Template
+TARGET = "Example"
 SOURCE = main
 
 $(TARGET):
