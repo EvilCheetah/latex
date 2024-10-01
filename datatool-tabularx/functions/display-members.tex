@@ -1,0 +1,7 @@
+\newcommand{\DisplayMembers}{%
+    \DTLforeach
+        {teamdata}{\name=Name,\email=Email}
+        {%
+            \name & \email \\
+        }%
+}
