@@ -1,0 +1,26 @@
+version: '3'
+
+vars:
+    COMPILER: latexmk
+    JOBNAME: Eugene Moshchyn - Resume
+
+tasks:
+    cleanup:
+        vars:
+            FLAGS: -c
+        cmds:
+            - |
+              {{ .COMPILER }} {{ .FLAGS }} -jobname="{{ .JOBNAME }}"
+
+    build:
+        vars:
+            FLAGS: -pdf
+            ENTRYPOINT: main.tex
+            
+            OUTPUT_DIR: .
+        cmds:
+            - |
+              {{ .COMPILER }} {{ .FLAGS }}            \
+              -jobname="{{ .JOBNAME }}"               \
+              -output-directory="./{{ .OUTPUT_DIR }}" \
+              {{ .ENTRYPOINT }}

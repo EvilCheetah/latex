@@ -2,12 +2,12 @@
 COMPILER = latexmk
 FLAGS    = -pdf
 
-TARGET = Resume
+TARGET = Eugene Moshchyn - Resume
 SOURCE = main
 
 $(TARGET):
-	@$(COMPILER) $(FLAGS)  \
-		-jobname=$(TARGET) \
+	@$(COMPILER) $(FLAGS)    \
+		-jobname="$(TARGET)" \
 		$(SOURCE).tex
 
 # Clean up generated files
