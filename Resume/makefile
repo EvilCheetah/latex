@@ -2,7 +2,7 @@
 COMPILER = latexmk
 FLAGS    = -pdf
 
-TARGET = Eugene Moshchyn - Resume
+TARGET = Resume - Eugene Moshchyn
 SOURCE = main
 
 $(TARGET):

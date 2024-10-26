@@ -2,7 +2,7 @@ version: '3'
 
 vars:
     COMPILER: latexmk
-    JOBNAME: Eugene Moshchyn - Resume
+    JOBNAME: Resume - Eugene Moshchyn
 
 tasks:
     cleanup:
