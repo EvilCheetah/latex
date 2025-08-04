@@ -1,0 +1,38 @@
+version: '3'
+
+vars:
+    COMPILER: latexmk
+    JOBNAME: Document Template
+
+tasks:
+    cleanup:
+        vars:
+            FLAGS: -c
+        cmds:
+            - |
+              {{ .COMPILER }} {{ .FLAGS }} -jobname="{{ .JOBNAME }}"
+
+    build:
+        vars:
+            FLAGS: -pdf
+            ENTRYPOINT: main.tex
+            
+            OUTPUT_DIR: .
+        cmds:
+            - |
+              {{ .COMPILER }} {{ .FLAGS }}            \
+              -jobname="{{ .JOBNAME }}"               \
+              -output-directory="./{{ .OUTPUT_DIR }}" \
+              {{ .ENTRYPOINT }}
+    
+    merge:
+        vars:
+            COMPILER: latexpand
+            FLAGS: --keep-comments --verbose
+            ENTRYPOINT: main.tex
+        cmds:
+            - |
+              {{ .COMPILER }} {{ .FLAGS }} \
+              -output="{{ .JOBNAME }}.tex" \
+              {{ .ENTRYPOINT }}
+              
