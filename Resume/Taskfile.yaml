@@ -24,3 +24,15 @@ tasks:
               -jobname="{{ .JOBNAME }}"               \
               -output-directory="./{{ .OUTPUT_DIR }}" \
               {{ .ENTRYPOINT }}
+    
+    merge:
+        vars:
+            COMPILER: latexpand
+            FLAGS: --keep-comments --verbose
+            ENTRYPOINT: main.tex
+        cmds:
+            - |
+              {{ .COMPILER }} {{ .FLAGS }} \
+              -output="{{ .JOBNAME }}.tex" \
+              {{ .ENTRYPOINT }}
+              

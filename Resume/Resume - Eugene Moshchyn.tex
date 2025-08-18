@@ -1,3 +1,64 @@
+\documentclass[11pt]{moderncv}
+
+\usepackage{import}
+
+% Packages
+% Font Encoding
+\usepackage[T1]{fontenc}
+
+
+% Page Configuration
+\usepackage{geometry}
+ 
+% Configuration
+% \usepackage{geometry}
+
+\geometry{
+    paper     = letterpaper,
+    landscape = false,
+    margin    = 0.5in,
+}
+ \moderncvstyle{banking}
+
+\renewcommand{\labelitemi}{-}
+  \name{Eugene}{Moshchyn}
+
+\title{Software Engineer}
+
+\phone[mobile]
+      {+1(209)553-8396}
+
+\email
+    {eugene.moshchyn@gmail.com}
+
+\social[linkedin]
+       [linkedin.com/in/eugene-moshchyn/]
+       {eugene-moshchyn}
+
+\social[github]
+       [github.com/EvilCheetah]
+       {EvilCheetah}
+
+\social[gitlab]
+       [gitlab.com/EvilCheetah]
+       {EvilCheetah}
+
+\social[stackoverflow]
+       [stackoverflow.com/users/9498863]
+       {Evil Cheetah}
+
+\address
+    {Oklahoma City, OK}
+
+\extrainfo
+    {\textcolor{gray}{\faIdCard[regular]}~ US Citizen} 
+
+\AtBeginDocument{\color{black}}
+
+
+\begin{document}
+    \makecvtitle
+\vspace*{-3em}
 \section{Experience}
 
 \cventry
@@ -8,10 +69,10 @@
     {}
     {%
         \begin{itemize}%
-            \item \textbf{Built} a custom VueJS web application and
-            FastAPI/Python backend to manage drivers, equipment assets, and
-            compliance documents, implementing CRUD interfaces, role-based
-            access control, and JSON schema validation for data integrity.%
+            \item \textbf{Built} a custom VueJS web application and Golang
+            backend to manage drivers, equipment assets, and compliance
+            documents, implementing CRUD interfaces, role-based access control,
+            and JSON schema validation for data integrity.%
                 %
             \item \textbf{Architected and deployed} a Dockerized
             invoice-automation pipeline on Google Cloud using {\LaTeX} and
@@ -92,3 +153,47 @@
             downstream testing by 30\%.
         \end{itemize}%
     }
+ % \subimport{.}{skills.tex}
+\section{Education}
+
+\cventry
+    {Expected Dec 2026}
+    {M.Sc. in Computer Science}
+    {The University of Oklahoma -- Norman}
+    {Norman, OK}
+    {GPA: 3.67/4.0}
+    {}
+
+\cventry
+    {Aug 2021 -- May 2025}
+    {B.Sc. in Computer Science}
+    {California State University -- Sacramento}
+    {Sacramento, CA}
+    {GPA: 3.68/4.0}
+    {}
+
+\cventry
+    {Jan 2018 -- Aug 2021}
+    {A.Sc. in Electrical Engineering and Physical Science}
+    {American River College}
+    {Sacramento, CA}
+    {GPA: 3.67/4.0}
+    {}
+ \section{Projects}
+
+\cventry
+    {Fall 2024 -- Spring 2025}
+    {Client Lookup Tool}
+    {University Senior Project -- Team Lead}
+    {California State University -- Sacramento}
+    {}
+    {}
+
+\cventry
+    {Fall 2023}
+    {Invoicing System}
+    {Course Group Project -- Agile Development, Team Lead}
+    {California State University -- Sacramento}
+    {}
+    {}
+  \end{document}
