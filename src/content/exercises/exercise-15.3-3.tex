@@ -1,0 +1,96 @@
+\item[\textbf{Exercise 15.3-3}]
+What is an optimal Huffman code for the following set of frequencies, based on
+the first 8 Fibonacci numbers?
+
+\texttt{a:1 b:1 c:2 d:3 e:5 f:8 g:13 h:21}
+
+Can you generalize your answer to find the optimal code when the frequencies are
+the first $n$ Fibonacci numbers?
+
+\Solution
+
+\HuffmanStep
+    {a:1 b:1 c:2 d:3 e:5 f:8 g:13 h:21}
+    {exercise-15.3-3-step-1.pdf}
+    {Step 1}
+
+\HuffmanStep
+    {c:2 a-b:2 d:3 e:5 f:8 g:13 h:21}
+    {exercise-15.3-3-step-2.pdf}
+    {Step 2}
+
+\HuffmanStep
+    {d:3 a-b-c:4 e:5 f:8 g:13 h:21}
+    {exercise-15.3-3-step-3.pdf}
+    {Step 3}
+
+\HuffmanStep
+    {a-b-c-d:7 e:5 f:8 g:13 h:21}
+    {exercise-15.3-3-step-4.pdf}
+    {Step 4}
+
+\HuffmanStep
+    {a-b-c-d-e:12 f:8 g:13 h:21}
+    {exercise-15.3-3-step-5.pdf}
+    {Step 5}
+
+\HuffmanStep
+    {a-b-c-d-e-f:20 g:13 h:21}
+    {exercise-15.3-3-step-6.pdf}
+    {Step 6}
+
+\HuffmanStep
+    {a-b-c-d-e-f-g:33 h:21}
+    {exercise-15.3-3-step-7.pdf}
+    {Step 7}
+
+
+\subsection*{Huffman Code Table}
+
+\begin{tabularx}{\linewidth}{ C | C | C }
+Message & Frequency & Code \\
+\hline
+a & 1 & 1111110 \\
+\hline
+b & 1 & 1111111 \\
+\hline
+c & 2 & 111110 \\
+\hline
+d & 3 & 11110 \\
+\hline
+e & 5 & 1110 \\
+\hline
+f & 8 & 110 \\
+\hline
+g & 13 & 10 \\
+\hline
+h & 21 & 0 \\
+\end{tabularx}
+
+\subsection*{General Solution}
+
+\noindent To find the optimal code when the frequencies are the first $n$
+Fibonacci numbers, we can use the following algorithm:
+\begin{enumerate}
+    \item Generate the first $n$ Fibonacci numbers.
+    
+    \item Sort the frequencies in decreasing order.
+    
+    \item Initialize a priority queue with the characters and their
+    corresponding frequencies.
+    
+    \item For $i = 1$ to $n - 1$:
+    \begin{enumerate}
+        \item Remove the two characters with the lowest frequencies from the
+        priority queue.
+        
+        \item Create a new node with these two characters as children and with a
+        frequency equal to the sum of their frequencies.
+        
+        \item Insert the new node back into the priority queue.
+    \end{enumerate}
+    
+    \item Traverse the Huffman tree to assign codes to each character.
+    
+    \item Return the code table.
+\end{enumerate}

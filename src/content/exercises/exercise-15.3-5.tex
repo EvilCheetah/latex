@@ -1,0 +1,17 @@
+\item[\textbf{Exercise 15.3-5}]
+Given an optimal prefix-free code on a set $C$ of $n$ characters, you wish to
+transmit the code itself using as few bits as possible. Show how to represent
+any optimal prefix-free code on $C$ using only $2n - 1 + n \lceil \lg n \rceil$
+bits. (\textit{Hint}: Use $2n - 1$ bits to specify the structure of the tree, as
+discovered by a walk of the tree.)
+
+\Solution
+
+A full binary tree with $n$ leaves has $n - 1$ internal nodes, for a total of
+$2n - 1$ nodes. You can specify the structure of the tree by a preorder walk,
+with a 1 at a node indicating that it's an internal node and a 0 meaning that
+the node is a leaf. Because the code is on $n$ characters, $\lceil \lg n \rceil$
+bits are needed to represent each character, so that if each leaf represents a
+character, $n \lceil \lg n \rceil$ bits represent all the characters. Store the
+characters in the order in which the preorder walk visits the leaves. The total
+number of bits is then $2n - 1 + n \lceil \lg n \rceil$.

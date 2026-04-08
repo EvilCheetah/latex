@@ -1,0 +1,21 @@
+\documentclass[tikz, border=5pt]{standalone}
+
+% Set styles for the nodes
+\tikzset{
+    leaf/.style = {circle, draw, thick, minimum size=1.5cm, inner sep=0pt},
+    root/.style = {circle, draw, thick, minimum size=1.5cm, inner sep=0pt}
+}
+
+\begin{document}
+\begin{tikzpicture}[thick]
+
+    \node [root] (root) at (0, 3) {2};
+
+    \node [leaf] (left)  at (-1.5, 0) {a:1};
+    \node [leaf] (right) at ( 1.5, 0) {b:1};
+
+    \draw (root) -- (left);
+    \draw (root) -- (right);
+
+\end{tikzpicture}
+\end{document}

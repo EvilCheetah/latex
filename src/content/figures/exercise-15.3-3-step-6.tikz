@@ -1,0 +1,51 @@
+\documentclass[tikz, border=5pt]{standalone}
+
+% Set styles for the nodes
+\tikzset{
+    leaf/.style = {circle, draw, thick, minimum size=1.5cm, inner sep=0pt},
+    root/.style = {circle, draw, thick, minimum size=1.5cm, inner sep=0pt}
+}
+
+\begin{document}
+\begin{tikzpicture}[thick]
+
+    \node [root] (thirtythree) at (-4.5, 18) {33};
+    \node [leaf] (g)           at (-6.0, 15) {g:13};
+
+    \node [root] (twenty) at (-3, 15) {20};
+    \node [leaf] (f)      at (-4.5, 12) {f:8};
+
+    \node [root] (twelve) at (-1.5, 12) {12};
+    \node [leaf] (e)      at (-3, 9) {e:5};
+
+    \node [root] (seven) at (0, 9) {7};
+
+    \node [leaf] (d)    at (-1.5, 6) {d:3};
+    \node [root] (four) at ( 1.5, 6) {4};
+
+    \node [leaf] (c)   at (0, 3) {c:2};
+    \node [root] (two) at (3, 3) {2};
+
+    \node [leaf] (a) at (1.5, 0) {a:1};
+    \node [leaf] (b) at (4.5, 0) {b:1};
+
+    \draw (thirtythree) -- (g);
+    \draw (thirtythree) -- (twenty);
+
+    \draw (twenty) -- (f);
+    \draw (twenty) -- (twelve);
+
+    \draw (twelve) -- (e);
+    \draw (twelve) -- (seven);
+
+    \draw (seven) -- (d);
+    \draw (seven) -- (four);
+    
+    \draw (four) -- (c);
+    \draw (four) -- (two);
+    
+    \draw (two)  -- (a);
+    \draw (two)  -- (b);
+
+\end{tikzpicture}
+\end{document}

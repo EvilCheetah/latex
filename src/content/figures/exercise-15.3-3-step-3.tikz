@@ -1,0 +1,33 @@
+\documentclass[tikz, border=5pt]{standalone}
+
+% Set styles for the nodes
+\tikzset{
+    leaf/.style = {circle, draw, thick, minimum size=1.5cm, inner sep=0pt},
+    root/.style = {circle, draw, thick, minimum size=1.5cm, inner sep=0pt}
+}
+
+\begin{document}
+\begin{tikzpicture}[thick]
+
+    \node [root] (seven) at (0, 9) {7};
+
+    \node [leaf] (d)    at (-1.5, 6) {d:3};
+    \node [root] (four) at ( 1.5, 6) {4};
+
+    \node [leaf] (c)   at (0, 3) {c:2};
+    \node [root] (two) at (3, 3) {2};
+
+    \node [leaf] (a) at (1.5, 0) {a:1};
+    \node [leaf] (b) at (4.5, 0) {b:1};
+
+    \draw (seven) -- (d);
+    \draw (seven) -- (four);
+    
+    \draw (four) -- (c);
+    \draw (four) -- (two);
+    
+    \draw (two)  -- (a);
+    \draw (two)  -- (b);
+
+\end{tikzpicture}
+\end{document}
