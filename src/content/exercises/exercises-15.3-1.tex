@@ -1,7 +1,34 @@
 \item[\textbf{Exercise 15.3-1}]
-Explain why, in the proof of Lemma 15.2, if $x.freq = b.freq$, then we must have
-$a.freq = b.freq = x.freq = y.freq$. 
+Explain why, in the proof of Lemma 15.2, if $\mathit{x.freq} = \mathit{b.freq}$,
+then we must have $\mathit{a.freq} = \mathit{b.freq} = \mathit{x.freq} =
+\mathit{y.freq}$. 
 
 \Solution
 
-Solution...
+From the premises of Lemma 15.2, we know that $x$ and $y$ are the two characters
+with the lowest frequencies, meaning $x.freq \le y.freq \le c.freq$ for any
+other character $c$. We are also given two sibling characters $a$ and $b$ at the
+maximum depth, where $a.freq \le b.freq$. 
+
+Because $x$ and $y$ have the lowest frequencies overall, it must be true that
+$x.freq \le a.freq$ and $y.freq \le b.freq$. 
+
+Given the assumption that $\mathit{x.freq} = \mathit{b.freq}$, we can prove the
+equality for $a$:
+\begin{alignat*}{2}
+                      & \mathit{x.freq} \le \mathit{a.freq} \le \mathit{b.freq} \quad && \text{(From the definitions above)} \\
+    \Rightarrow \quad & \mathit{x.freq} \le \mathit{a.freq} \le \mathit{x.freq} \quad && \text{(Substituting $\mathit{b.freq}$ with $\mathit{x.freq}$)} \\
+    \Rightarrow \quad & \mathit{a.freq} = \mathit{x.freq} = \mathit{b.freq} &&
+\end{alignat*}
+
+Similarly, we can prove the equality for $y$:
+\begin{alignat*}{2}
+                      & \mathit{x.freq} \le \mathit{y.freq} \le \mathit{b.freq} \quad && \text{(From the definitions above)} \\
+    \Rightarrow \quad & \mathit{x.freq} \le \mathit{y.freq} \le \mathit{x.freq} \quad && \text{(Substituting $\mathit{b.freq}$ with $\mathit{x.freq}$)} \\
+    \Rightarrow \quad & \mathit{y.freq} = \mathit{x.freq} = \mathit{b.freq} &&
+\end{alignat*}
+
+By combining these two proven equalities, we get the final equation:
+$$
+    \mathit{x.freq} = \mathit{y.freq} = \mathit{b.freq} = \mathit{a.freq}
+$$
